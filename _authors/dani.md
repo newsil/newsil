@@ -9,3 +9,4 @@ contact:
    value: "dani@newsil.cf"
    link: "mailto:dani@newsil.cf"
 ---
+קוסם טכנולוגי, אשף תכנות. מומחה בפיתוח אפליקציות, אתרים ומערכות מידע.
