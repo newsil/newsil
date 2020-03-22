@@ -3,7 +3,7 @@
 html {
   direction: rtl;
   font-family: "Noto Sans Hebrew", system, -apple-system, ".SFNSText-Regular", "San Francisco", "Roboto", "Segoe UI", "Helvetica Neue", "Lucida Grande", sans-serif;
-  
+
   body {
     background-color: whitesmoke;
   }
@@ -30,19 +30,21 @@ html {
   box-shadow: 0 3px 4px 0 rgba(0, 0, 0, 0.05);
 
   a {
-    padding: 0.2rem 0.8rem;
+    padding: 0.25rem 0.8rem;
     margin-right: 1rem;
     text-decoration: none;
     color: $secondary-label-color;
-    transition: 0.1s color ease;
+    transition: 0.2s all ease;
+
+    border-radius: 0.2rem;
 
     &:hover {
-      color: $primary-label-color;
+      color: #501D23;
+      background-color: $accent-light-color;
     }
 
     &.current {
       background-color: $accent-color;
-      border-radius: 1rem;
       color: white;
     }
   }
