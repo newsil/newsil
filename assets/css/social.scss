@@ -46,7 +46,6 @@ $size-default: 2.25rem;
       .icon {
         width: $size-default;
         height: $size-default;
-        background-size: $size-default;
       }
     }
 
@@ -54,12 +53,12 @@ $size-default: 2.25rem;
       padding: 0 0.6rem;
     }
 
-
     &.t-email {
       background-color: $accent-color;
 
       .type .icon {
         background: url("/assets/svg/email.svg");
+        background-size: $size-default;
       }
     }
 
@@ -68,6 +67,7 @@ $size-default: 2.25rem;
 
       .type .icon {
         background: url("/assets/svg/twitter.svg");
+        background-size: $size-default;
       }
     }
 
