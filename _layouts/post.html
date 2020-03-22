@@ -20,15 +20,16 @@ layout: default
             {{ content }}
         </div>
     </article>
-    <hr class="authors-separator">
+</div>
+<div class="content-wrapper separate">
     <ul class="authors">
         {% for person in page.authors %}
-            {% assign author = site.authors | where: 'short_name', person | first %}
-            <li class="author">
-                <p class="name">{{ author.name }}</p>
-                <p class="bio">{{ author.content }}</p>
-                {% include social.html contact=author.contact size="small" %}
-            </li>
+        {% assign author = site.authors | where: 'short_name', person | first %}
+        <li class="author">
+            <p class="name">{{ author.name }}</p>
+            <p class="bio">{{ author.content }}</p>
+            {% include social.html contact=author.contact size="small" %}
+        </li>
         {% endfor %}
     </ul>
 </div>

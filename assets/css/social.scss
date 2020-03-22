@@ -7,15 +7,16 @@ $size-default: 2.25rem;
 
 .contact-container {
   display: flex;
+  flex-wrap: wrap;
 
   .contact {
     direction: ltr;
 
     display: flex;
-    flex-wrap: wrap;
     align-items: center;
 
     margin-left: 1rem;
+    margin-bottom: 1rem;
 
     background-color: #878787;
     transition: 0.2s opacity ease;
