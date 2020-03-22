@@ -1,0 +1,38 @@
+---
+layout: post
+---
+<link rel="stylesheet" href="/assets/css/post-quiz.css">
+{{ content }}
+<br />
+<div>
+    <script>
+        const osa = (e) => {
+            if (!e.dataset.answer) {
+                e.classList.add("wrong");
+            }
+
+            e.parentElement.classList.add("done");
+        };
+    </script>
+
+    <div class="quiz">
+    {% for question in page.quiz %}
+        <div class="question{% if forloop.index == 1 %} active{% endif %}">
+            <p class="title">{{question.title}}</p>
+            <ul data-question-index="{{forloop.index0}}">
+            {% for option in question.options %}
+                <li
+                    onclick="osa(this);"
+                    {% if option.correct %}data-answer="1"{% endif %}
+                >
+                    {{option.value}}
+                </li>
+            {% endfor %}
+            </ul>
+            {% unless forloop.last %}
+            <div class="separator"></div>
+            {% endunless %}
+        </div>
+    {% endfor %}
+    </div>
+</div>

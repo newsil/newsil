@@ -1,0 +1,19 @@
+---
+layout: default
+title: הצוות | NewsIL
+---
+<link rel="stylesheet" href="assets/css/staff.css">
+<main class="content-wrapper">
+    <h1>הצוות</h1>
+
+    <ul class="authors">
+        {% assign authors = site.authors | sort:"order" %}
+        {% for author in authors %}
+        <li>
+            <h3 class="name"><a href="{{ author.url }}">{{ author.name }}</a></h3>
+            <h4 class="position">{{ author.position }}</h4>
+            <p>{{ author.content | markdownify }}</p>
+        </li>
+        {% endfor %}
+    </ul>
+</main>

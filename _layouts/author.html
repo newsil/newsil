@@ -1,0 +1,28 @@
+---
+layout: default
+---
+<link rel="stylesheet" href="/assets/css/author.css">
+<main class="content-wrapper">
+    <h1>{{ page.name }}</h1>
+    <h3>{{ page.position }}</h3>
+
+    <br />
+    {{ content }}
+    <br />
+    <div class="contact-container">
+        {% for contact in page.contact %}
+        <a {% if contact.link %}href="{{contact.link}}"{% endif %} class="contact t-{{contact.type}}">
+            <div class="type"><div class="icon"></div><span>{{contact.type}}</span></div>
+            <div class="value">{{contact.value}}</div>
+        </a>
+        {% endfor %}
+    </div>
+    <br />
+    <h2>כתבות</h2>
+    <ul>
+        {% assign filtered_posts = site.posts | where:"authors", page.short_name %}
+        {% for post in filtered_posts %}
+        <li><a href="{{ post.url }}">{{ post.title }}</a></li>
+        {% endfor %}
+    </ul>
+</main>

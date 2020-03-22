@@ -1,0 +1,92 @@
+@import "colors";
+
+html {
+  direction: rtl;
+  font-family: "Noto Sans Hebrew", system, -apple-system, ".SFNSText-Regular", "San Francisco", "Roboto", "Segoe UI", "Helvetica Neue", "Lucida Grande", sans-serif;
+  
+  body {
+    background-color: whitesmoke;
+  }
+}
+
+
+#layout {
+  padding: 5rem 1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#nav {
+  z-index: 2;
+  position: fixed;
+  height: 3.5rem;
+  width: 100%;
+
+  display: flex;
+  align-items: center;
+
+  background-color: white;
+  box-shadow: 0 3px 4px 0 rgba(0, 0, 0, 0.05);
+
+  a {
+    padding: 0.2rem 0.8rem;
+    margin-right: 1rem;
+    text-decoration: none;
+    color: $secondary-label-color;
+    transition: 0.1s color ease;
+
+    &:hover {
+      color: $primary-label-color;
+    }
+
+    &.current {
+      background-color: $accent-color;
+      border-radius: 1rem;
+      color: white;
+    }
+  }
+}
+
+a {
+  color: $accent-color;
+  text-decoration: none;
+}
+
+h1 {
+  font-size: 2rem;
+  font-weight: bold;
+  padding-bottom: 1rem;
+}
+
+h2 {
+  font-size: 1.5rem;
+  font-weight: 600;
+  padding-bottom: 0.8rem;
+}
+
+h3 {
+  font-size: 1.2rem;
+  font-weight: 500;
+  padding-bottom: 0.5rem;
+}
+
+h4 {
+  font-size: 0.8rem;
+  font-weight: bold;
+  padding-bottom: 0.2rem;
+}
+.content-wrapper {
+  margin: 0 1rem;
+  padding: 2rem 1rem;
+
+  width: 100%;
+  max-width: 700px;
+  background-color: white;
+  box-shadow: 0 3px 5px 0 rgba(0, 0, 0, 0.1);
+
+  > * {
+    max-width: 600px;
+    margin: auto;
+  }
+}

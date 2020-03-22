@@ -1,0 +1,17 @@
+---
+layout: default
+title: חדשות ישראל | NewsIL
+---
+<link rel="stylesheet" href="assets/css/blog.css">
+<main class="content-wrapper">
+    <h1>כתבות אחרונות</h1>
+
+    <ul class="posts">
+        {% for post in site.posts %}
+        <li>
+            <h2 class="title"><a href="{{ post.url }}">{{ post.title }}</a></h2>
+            <div class="excerpt">{{ post.excerpt }}</div>
+        </li>
+        {% endfor %}
+    </ul>
+</main>

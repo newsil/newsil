@@ -1,0 +1,18 @@
+---
+---
+@import "colors";
+
+article {
+  margin: auto;
+  max-width: 600px;
+
+  .author {
+    margin-bottom: 2rem;
+  }
+
+  .content {
+    p {
+      margin-bottom: 1em;
+    }
+  }
+}

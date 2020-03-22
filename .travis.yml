@@ -1,0 +1,24 @@
+language: ruby
+os: linux
+dist: bionic
+rvm:
+- 2.6
+before_script:
+- chmod +x ./script/cibuild
+script: "./script/cibuild"
+env:
+  global:
+  - NOKOGIRI_USE_SYSTEM_LIBRARIES=true
+#addons:
+#  apt:
+#    packages:
+#    - libcurl4-openssl-dev
+cache: bundler
+deploy:
+  provider: surge
+  project: "./_site/"
+  domain: "$SURGE_DOMAIN"
+notifications:
+  email: false
+  slack:
+    secure: daBYyXXKL7RdQ5UEC6m/84w+nJrBupkI8ygg2dO2BMGuuxo1q8MZi1KYM9/WpkY5t9cuHr3u5jSjIVPFElpaE523Sqc3ye8P27gNGLoKwJdJFfm3SSCyyPNaNfVjQYi229ZEeRxPtmOMb685cAo+xHIr1gq1N0Nts3VzaO3+QvkOUW+4GgRx/KA0EeHv95+356871voGtWrLGZdghp72wrCRuD42l5LKiS3/GPx08HADWMFBygEK6YzghH9mRWtGKgAhE3hIVNaFRN5SkeOamXA0pfC27YbUBbcilXRBQd6iX3o01lA3bFTneof3Ymder6e6RoX9RYAqn3D9a1mPtmp+pEHqnIfUOEQHcfi0QRftBfZ8scZ5NCmKPTyYkbvWUR07JRvODDdXDYdo1OdfwqDpIL2EJV1JE5oS+RIjT43kUiL+Zt0Fzxm7sGyc/FFnjweAxprCpRFjyWNfF/OL5txVcQ01REiSqxHkv5nHnwVOCCcyWbpzbpqHPh1C+t+HbUqWMONV7UAHFdVSm9GPZayhXQQL6Ah8XBC7OMWAxT6K9vBeebLwBXVn36OfPooBJKIZZymK1DQM+nZE5ftugnKe3iq6umzhEgoD5fXUu+yIxd+PWkQQ3cJ/2GbEvLUUBwFOKItDdk7S+L5oblWWU9qt9cV6SiBJmJsaYuDSPuc=
