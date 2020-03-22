@@ -16,3 +16,24 @@ article {
     }
   }
 }
+
+.authors-separator {
+  margin: 1rem auto;
+  border: 1px solid rgba(0,0,0,0.1);
+}
+
+.authors {
+  .author {
+    .name {
+      font-size: 1.2rem;
+      font-weight: 500;
+      padding-bottom: 0.2rem;
+    }
+
+    .bio {
+      color: #878787;
+      font-size: 0.8rem;
+      padding-bottom: 0.75rem;
+    }
+  }
+}

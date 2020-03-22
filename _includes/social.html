@@ -1,0 +1,9 @@
+<link rel="stylesheet" href="/assets/css/social.css">
+<div class="contact-container">
+    {% for contact in include.contact %}
+    <a {% if contact.link %}href="{{contact.link}}"{% endif %} class="contact t-{{contact.type}} s-{{include.size}}">
+        <div class="type"><div class="icon"></div><span>{{contact.type}}</span></div>
+        <div class="value">{{contact.value}}</div>
+    </a>
+    {% endfor %}
+</div>

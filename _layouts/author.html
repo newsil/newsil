@@ -1,7 +1,6 @@
 ---
 layout: default
 ---
-<link rel="stylesheet" href="/assets/css/author.css">
 <main class="content-wrapper">
     <h1>{{ page.name }}</h1>
     <h3>{{ page.position }}</h3>
@@ -9,14 +8,7 @@ layout: default
     <br />
     {{ content }}
     <br />
-    <div class="contact-container">
-        {% for contact in page.contact %}
-        <a {% if contact.link %}href="{{contact.link}}"{% endif %} class="contact t-{{contact.type}}">
-            <div class="type"><div class="icon"></div><span>{{contact.type}}</span></div>
-            <div class="value">{{contact.value}}</div>
-        </a>
-        {% endfor %}
-    </div>
+    {% include social.html contact=page.contact %}
     <br />
     <h2>כתבות</h2>
     <ul>
