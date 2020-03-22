@@ -3,15 +3,32 @@ layout: default
 title: חדשות ישראל | NewsIL
 ---
 <link rel="stylesheet" href="assets/css/blog.css">
-<main class="content-wrapper">
-    <h1>כתבות אחרונות</h1>
+<div class="content-grid">
+    <div class="grid-item side" style="visibility: hidden">
 
-    <ul class="posts">
-        {% for post in site.posts %}
-        <li>
-            <h2 class="title"><a href="{{ post.url }}">{{ post.title }}</a></h2>
-            <div class="excerpt">{{ post.excerpt }}</div>
-        </li>
-        {% endfor %}
-    </ul>
-</main>
+    </div>
+    <main class="grid-item">
+        <div class="grid-content">
+            <h1>כתבות אחרונות</h1>
+
+            <ul class="posts">
+                {% for post in site.posts %}
+                <li>
+                    <h2 class="title"><a href="{{ post.url }}">{{ post.title }}</a></h2>
+                    <div class="excerpt">{{ post.excerpt }}</div>
+                </li>
+                {% endfor %}
+            </ul>
+        </div>
+    </main>
+    <div class="grid-item side">
+        <h1>ציוצים אחרונים</h1>
+        <a class="twitter-timeline"
+           data-lang="he"
+           href="https://twitter.com/thenewsil?ref_src=twsrc%5Etfw"
+           data-chrome="noheader nofooter">
+            טוען...
+        </a>
+        <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+    </div>
+</div>
