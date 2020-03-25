@@ -1,6 +1,6 @@
 ---
-order: 3
-title: אוריאל עמרם | צוות NewsIL
+order: 4
+title: אוריאל עמרם
 short_name: אוריאל עמרם
 name: אוריאל עמרם
 position: כתב פוליטי-מדיני

@@ -1,5 +1,5 @@
 ---
-title: איתי ראובן | צוות NewsIL
+title: איתי ראובן
 short_name: איתי ראובן
 name: איתי ראובן
 position: כתב טכנולוגיה ופנאי

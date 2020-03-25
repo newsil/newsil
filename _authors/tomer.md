@@ -1,6 +1,6 @@
 ---
 order: 1
-title: תומר מיכאלי | צוות NewsIL
+title: תומר מיכאלי
 short_name: תומר מיכאלי
 name: תומר מיכאלי
 position: עורך ראשי

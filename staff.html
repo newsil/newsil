@@ -1,8 +1,9 @@
 ---
 layout: default
-title: הצוות | NewsIL
+title: הצוות
+permalink: /staff/
 ---
-<link rel="stylesheet" href="assets/css/staff.css">
+<link rel="stylesheet" href="/assets/css/staff.css">
 <main class="content-wrapper">
     <h1>הצוות</h1>
 
@@ -10,8 +11,8 @@ title: הצוות | NewsIL
         {% assign authors = site.authors | sort:"order" %}
         {% for author in authors %}
         <li>
-            <h3 class="name"><a href="{{ author.url }}">{{ author.name }}</a></h3>
-            <h4 class="position">{{ author.position }}</h4>
+            <h4 class="name"><a href="{{ author.url }}">{{ author.name }}</a></h4>
+            <h5 class="position">{{ author.position }}</h5>
             <p>{{ author.content | markdownify }}</p>
         </li>
         {% endfor %}

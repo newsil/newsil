@@ -1,6 +1,6 @@
 ---
 order: 2
-title: דני שיפר | צוות NewsIL
+title: דני שיפר
 short_name: דני שיפר
 name: דני שיפר
 position: מנהל טכנולוגיות ראשי

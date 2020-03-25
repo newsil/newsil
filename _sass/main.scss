@@ -29,23 +29,26 @@ html {
   background-color: white;
   box-shadow: 0 3px 4px 0 rgba(0, 0, 0, 0.05);
 
-  a {
-    padding: 0.25rem 0.8rem;
+  .item {
     margin-right: 1rem;
-    text-decoration: none;
-    color: $secondary-label-color;
-    transition: 0.2s all ease;
 
-    border-radius: 0.2rem;
+    a {
+      padding: 0.25rem 0.8rem;
+      text-decoration: none;
+      color: $secondary-label-color;
+      transition: color 0.2s ease, background-color 0.2s ease;
 
-    &:hover {
-      color: #501D23;
-      background-color: $accent-light-color;
-    }
+      border-radius: 0.2rem;
 
-    &.current {
-      background-color: $accent-color;
-      color: white;
+      &:hover {
+        color: #501D23;
+        background-color: $accent-light-color;
+      }
+
+      &.current {
+        background-color: $accent-color;
+        color: white;
+      }
     }
   }
 }
@@ -62,19 +65,25 @@ h1 {
 }
 
 h2 {
-  font-size: 1.5rem;
-  font-weight: 600;
+  font-size: 1.8rem;
+  font-weight: bold;
   padding-bottom: 0.8rem;
 }
 
 h3 {
+  font-size: 1.3rem;
+  font-weight: 600;
+  padding-bottom: 0.5rem;
+}
+
+h4 {
   font-size: 1.2rem;
   font-weight: 500;
   padding-bottom: 0.5rem;
 }
 
-h4 {
-  font-size: 0.8rem;
+h5 {
+  font-size: 0.85rem;
   font-weight: bold;
   padding-bottom: 0.2rem;
 }

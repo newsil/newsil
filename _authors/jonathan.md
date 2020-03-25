@@ -1,6 +1,6 @@
 ---
-order: 2
-title: יהונתן דן | צוות NewsIL
+order: 3
+title: יהונתן דן
 short_name: יהונתן דן
 name: יהונתן דן
 position: עורך ספורט
